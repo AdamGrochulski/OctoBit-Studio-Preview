@@ -124,10 +124,5 @@ No graphics libraries. No canvas frameworks. Every pixel is hand-crafted:
 ---
 
 <div align="center">
-  <img src="https://img.shields.io/badge/source_code-private-363652?style=flat-square&labelColor=22223B" />
-  <br/><br/>
-  <sub>
-    Made with <img src="https://img.shields.io/badge/-OctoOne-AE86EB?style=flat-square&labelColor=22223B" alt="OctoOne" /> &nbsp;·&nbsp;
-    <a href="https://octobit.studio">octobit.studio</a>
-  </sub>
+  <sub>Source code: private &nbsp;·&nbsp; <a href="https://octobit.studio">octobit.studio</a></sub>
 </div>
