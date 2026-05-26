@@ -11,10 +11,9 @@
   <br/><br/>
 
   <img src="https://img.shields.io/badge/version-1.4.α-AE86EB?style=flat-square&labelColor=22223B" alt="version" />
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black&labelColor=22223B" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white&labelColor=22223B" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Canvas_2D_API-no_libs-AE86EB?style=flat-square&labelColor=22223B" alt="Canvas 2D" />
-  <img src="https://img.shields.io/badge/source-private-363652?style=flat-square&labelColor=22223B" alt="source" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black&labelColor=22223B" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white&labelColor=22223B" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Canvas_2D-API-orange?style=flat-square&labelColor=22223B" alt="Canvas 2D" />
 </div>
 
 ---
