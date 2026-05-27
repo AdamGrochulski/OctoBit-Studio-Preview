@@ -2,7 +2,7 @@
   <img src="assets/logo.svg" alt="OctoBit Studio" width="120" />
 
   <h1>OctoBit Studio</h1>
-  <p><strong>A professional pixel art editor — built from scratch, runs in the browser.</strong></p>
+  <p>A pixel art editor that actually feels good to use.</p>
 
   <a href="https://octobit.studio">
     <img src="https://img.shields.io/badge/▶%20Open%20App-octobit.studio-AE86EB?style=for-the-badge&labelColor=22223B" alt="Open App" />
@@ -22,22 +22,25 @@
 
 ---
 
-## Features
+Most pixel art tools either look intimidating or just feel clunky to use.
+OctoBit Studio is my answer to that — a browser-based editor where
+the experience comes first. No install. No friction. Just open and draw.
 
-### Drawing Tools
-| Tool | Shortcut | Description |
-|------|----------|-------------|
-| ✏️ Pencil | `Ctrl+B` | Bresenham, smooth stroke between points |
-| 🧽 Eraser | `Ctrl+E` | Pixel-perfect erasing |
-| 🪣 Bucket Fill | `Ctrl+G` | Iterative scanline flood fill — no stack overflow |
-| 💧 Eyedropper | `Ctrl+I` / `Alt` | Samples from composite of all layers |
-| 📏 Line | `Ctrl+L` | Bresenham, live preview while dragging |
-| ⬜ Rectangle | `Ctrl+R` | Outline, live preview |
-| ⭕ Ellipse | `Ctrl+O` | Zingl midpoint algorithm, live preview |
+---
 
-All tools support adjustable **brush size** — from 1px up to the canvas max dimension.
+## Tools
 
-### Shape Tools in Action
+| | Tool | Shortcut |
+|--|------|----------|
+| ✏️ | Pencil | `Ctrl+B` |
+| 🧽 | Eraser | `Ctrl+E` |
+| 🪣 | Bucket Fill | `Ctrl+G` |
+| 💧 | Eyedropper | `Ctrl+I` / `Alt` |
+| 📏 | Line | `Ctrl+L` |
+| ⬜ | Rectangle | `Ctrl+R` |
+| ⭕ | Ellipse | `Ctrl+O` |
+
+All tools support adjustable brush size.
 
 ![Shapes demo](assets/shapes.gif)
 
@@ -70,56 +73,44 @@ All tools support adjustable **brush size** — from 1px up to the canvas max di
 
 ---
 
-## Layers & Groups
+## Layers
 
-- Full layer tree with **nested groups** (Pass-Through blend mode)
-- Hide, lock, reorder — drag & drop (before / inside / after)
-- Smart thumbnails cropped to the painted area
-- Multi-select: `Ctrl+click`, `Shift+click` range
+Full layer tree with nested groups, hide/lock, drag & drop reorder,
+and thumbnails that auto-crop to the painted area.
 
-## Color System
+## Color
 
-- Two picker modes: **RGB/HSV** square and **HSL Triangle** (hue wheel + SV triangle)
-- Primary / secondary color widget with animated highlight
-- Palette system: document, system, app — persisted in localStorage
-- **Color harmonies**: complementary, analogous, triadic
-- Recent color history (last 10 used)
-
----
+Two picker modes (RGB/HSV square + HSL triangle), primary/secondary
+color widget, palette system with harmonies, last 10 used colors.
 
 ## Zoom & Navigation
 
 ![Zoom demo](assets/zoom.gif)
 
-Mouse wheel zooms toward the cursor. `Space + drag` to pan. Pixel grid appears at zoom ≥ 4×.
+Wheel zooms toward cursor. `Space + drag` to pan. Pixel grid at ≥ 4×.
 
 ---
 
-## Built From Scratch
+## Under the hood
 
-No graphics libraries. No canvas frameworks. Every pixel is hand-crafted:
+Built from scratch — no canvas libraries:
 
-- **DocumentEngine** — layer compositor with Canvas Pool, eliminates GC pressure at 60 FPS
-- **Bresenham & Zingl algorithms** — pixel-perfect lines and ellipses
-- **Command Pattern undo/redo** — 50 steps, three command types (`LayerPixels`, `LayerStructure`, `LayerRename`)
-- **Snapshot-preview** — shape tools clone `ImageData` on every move for flicker-free live preview
+- **DocumentEngine** — layer compositor with Canvas Pool (60 FPS, no GC pressure)
+- **Bresenham & Zingl** — pixel-perfect lines and ellipses
+- **Command pattern** — undo/redo, 50 steps
+- **Snapshot-preview** — live shape preview without flicker
 
----
-
-## Themes
-
-4 built-in themes: **OctoOne** (dark), **Kyoonotay**, **Dracula**, **Light** — pure CSS variables, zero hardcoded colors in component code.
+4 themes: **Octoone** (dark), **Kyoonotay**, **Dracula**, **Light**.
 
 ---
 
-## Roadmap
+## What's next
 
-- [ ] Fill variants for Rectangle & Ellipse
-- [ ] Rectangular selection, lasso, magic wand
-- [ ] Custom `.octo` file format (lossless + embedded palettes)
-- [ ] Animation timeline — keyframes, onion skinning
-- [ ] Native desktop app (Tauri)
-- [ ] Multiplayer collaboration
+- [ ] Fill mode for shapes
+- [ ] Selection tools (rect, lasso, magic wand)
+- [ ] `.octo` file format with embedded palettes
+- [ ] Animation timeline + onion skinning
+- [ ] Desktop app (Tauri)
 
 ---
 
