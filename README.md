@@ -10,7 +10,7 @@
 
   <br/><br/>
 
-  <img src="https://img.shields.io/badge/version-1.4.α-AE86EB?style=flat-square&labelColor=22223B" alt="version" />
+  <img src="https://img.shields.io/badge/version-1.5.α-AE86EB?style=flat-square&labelColor=22223B" alt="version" />
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black&labelColor=22223B" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white&labelColor=22223B" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Canvas_2D-API-orange?style=flat-square&labelColor=22223B" alt="Canvas 2D" />
@@ -18,31 +18,78 @@
 
 ---
 
-![Drawing demo](assets/drawing.gif)
+<div align="center">
+  <img src="assets/drawing.gif" alt="Drawing demo" width="900" />
+</div>
+
+No install. No account. No friction. Open the browser and start drawing.
 
 ---
 
-Most pixel art tools either look intimidating or just feel clunky to use.
-OctoBit Studio is my answer to that — a browser-based editor where
-the experience comes first. No install. No friction. Just open and draw.
+## Draw with precision
 
----
-
-## Tools
+<div align="center">
+  <img src="assets/shapes.gif" alt="Shapes and fill tools" width="900" />
+</div>
 
 | | Tool | Shortcut |
 |--|------|----------|
 | ✏️ | Pencil | `Ctrl+B` |
 | 🧽 | Eraser | `Ctrl+E` |
 | 🪣 | Bucket Fill | `Ctrl+G` |
-| 💧 | Eyedropper | `Ctrl+I` / `Alt` |
+| 💧 | Eyedropper | `Ctrl+I` |
 | 📏 | Line | `Ctrl+L` |
 | ⬜ | Rectangle | `Ctrl+R` |
+| ⬛ | Fill Rectangle | `Ctrl+R` (toggle) |
 | ⭕ | Ellipse | `Ctrl+O` |
+| 🔵 | Fill Ellipse | `Ctrl+O` (toggle) |
 
-All tools support adjustable brush size.
+All tools support adjustable brush size. Rectangle and Ellipse toggle between outline and fill mode via a flyout.
 
-![Shapes demo](assets/shapes.gif)
+---
+
+## Layers
+
+<div align="center">
+  <img src="assets/layers.gif" alt="Layer workflow" width="900" />
+</div>
+
+Full layer tree with nested groups — hide, lock, drag & drop reorder, thumbnails auto-cropped to painted area. Flip H/V and merge layers directly from the context menu.
+
+---
+
+## Your projects, your files
+
+<div align="center">
+  <img src="assets/screenshot-file-menu.png" alt="File menu" />
+</div>
+
+OctoBit uses its own binary format — **`.octo`** — storing layer pixel data as raw PNG blobs with gzip-compressed metadata. No dependencies, no base64 overhead.
+
+- **File → Save As...** opens your OS native file picker (Chrome, Edge, Brave)
+- **File → Open...** loads a `.octo` file back with all layers intact
+- The `●` indicator in the project tab shows unsaved changes
+- Auto-save to browser storage keeps your work between sessions
+
+---
+
+## Zoom & Navigation
+
+<div align="center">
+  <img src="assets/zoom.gif" alt="Zoom demo" width="900" />
+</div>
+
+Mouse wheel zooms toward cursor. `Space + drag` to pan. Pixel grid appears at ≥ 4×. Zoom controls in the toolbar: `−` / `100%` / `+` / **Center**.
+
+---
+
+## Color
+
+<div align="center">
+  <img src="assets/screenshot-color.png" alt="Color panel" width="360" />
+</div>
+
+Two picker modes: HSV square and HSL triangle. Primary/secondary color widget. Palette system with document palettes, harmonies (complementary, analogous, triadic), and last 10 used colors.
 
 ---
 
@@ -55,14 +102,14 @@ All tools support adjustable brush size.
       <br/><sub>Full editor</sub>
     </td>
     <td align="center">
-      <img src="assets/screenshot-color.png" alt="Color panel" />
-      <br/><sub>Color panel</sub>
+      <img src="assets/screenshot-layers.png" alt="Layers panel" />
+      <br/><sub>Layers panel</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="assets/screenshot-layers.png" alt="Layers panel" />
-      <br/><sub>Layers panel</sub>
+      <img src="assets/screenshot-color.png" alt="Color panel" />
+      <br/><sub>Color panel</sub>
     </td>
     <td align="center">
       <img src="assets/screenshot-tools.png" alt="Tool palette" />
@@ -70,24 +117,6 @@ All tools support adjustable brush size.
     </td>
   </tr>
 </table>
-
----
-
-## Layers
-
-Full layer tree with nested groups, hide/lock, drag & drop reorder,
-and thumbnails that auto-crop to the painted area.
-
-## Color
-
-Two picker modes (RGB/HSV square + HSL triangle), primary/secondary
-color widget, palette system with harmonies, last 10 used colors.
-
-## Zoom & Navigation
-
-![Zoom demo](assets/zoom.gif)
-
-Wheel zooms toward cursor. `Space + drag` to pan. Pixel grid at ≥ 4×.
 
 ---
 
@@ -99,6 +128,7 @@ Built from scratch — no canvas libraries:
 - **Bresenham & Zingl** — pixel-perfect lines and ellipses
 - **Command pattern** — undo/redo, 50 steps
 - **Snapshot-preview** — live shape preview without flicker
+- **OctoFormat** — binary `.octo` container, gzip metadata, raw PNG blobs, no dependencies
 
 4 themes: **Octoone** (dark), **Kyoonotay**, **Dracula**, **Light**.
 
@@ -106,9 +136,7 @@ Built from scratch — no canvas libraries:
 
 ## What's next
 
-- [ ] Fill mode for shapes
 - [ ] Selection tools (rect, lasso, magic wand)
-- [ ] `.octo` file format with embedded palettes
 - [ ] Animation timeline + onion skinning
 - [ ] Desktop app (Tauri)
 
