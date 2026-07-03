@@ -19,7 +19,8 @@
 ---
 
 <div align="center">
-  <img src="assets/drawing.gif" alt="Drawing demo" width="900" />
+  <img src="assets/hero.gif" alt="Tropical island scene speed-painted in OctoBit Studio" width="900" />
+  <br/><sub>A 64×64 tropical island — painted start to finish with OctoBit tools: flood fill, shapes, pencil and line.</sub>
 </div>
 
 No install. No account. No friction. Open the browser and start drawing.
